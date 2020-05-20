@@ -2,7 +2,7 @@ steps:
   # - id: "Rodando testes"
   #   name: 'mirror.gcr.io/library/golang'
   #   env: ['GO111MODULE=auto']
-  #   dir: 'go/src'
+  #   dir: 'src'
   #   args: ['go', 'test', '-v']
 
   - id: "Rodando docker-compose"

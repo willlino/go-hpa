@@ -18,7 +18,7 @@ spec:
 
         resources:
           requests:
-            cpu: 50m
+            cpu: "50m"
           limits:
-            cpu: 100m
+            cpu: "100m"
         
