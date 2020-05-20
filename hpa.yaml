@@ -9,4 +9,4 @@ spec:
     apiVersion: extensions/v1beta1
     kind: Deployment
     name: go-hpa-app
-  targetCPUUtilizationPercentage: 15
+  targetCPUUtilizationPercentage: 15 
