@@ -25,7 +25,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func doSqrt(value float64) float64 {
 	return math.Sqrt(value)
-}
+} 
 
 func printMessage() {
 	fmt.Printf("Code.education Rocks!")
