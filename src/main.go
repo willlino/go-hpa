@@ -20,16 +20,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	value, _ := strconv.ParseFloat(valueInString, 64)
 
-	doSqrt(value)
+	result := doSqrt(value)
+	fmt.Printf("%v", result)
 	printMessage()
 }
-
-// func runSqrtMultipleTimes(times int) {
-// 	x := 0.0001
-// 	for i := 0; i <= times; i++ {
-// 		x += doSqrt(x)
-// 	}
-// }
 
 func doSqrt(value float64) float64 {
 	return math.Sqrt(value)
