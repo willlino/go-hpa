@@ -14,15 +14,13 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	valueInString := r.URL.Query().Get("value")
-
-	validateQueryString(valueInString)
-
-	value, _ := strconv.ParseFloat(valueInString, 64)
-
-	result := doSqrt(value)
-	fmt.Printf("%v", result)
+	
 	printMessage()
+	
+	var x float64 = 0.0001
+	for {
+		x += doSqrt(x)
+	}
 }
 
 func doSqrt(value float64) float64 {
@@ -30,18 +28,18 @@ func doSqrt(value float64) float64 {
 }
 
 func printMessage() {
-	fmt.Printf("William Rocks!")
+	fmt.Printf("Code.education Rocks!")
 }
 
 func validateQueryString(input string) []string {
 	errors := []string{}
 
 	if input == "" {
-		errors = append(errors, "The input 'value' cannot be empty")
+		errors = append(errors, "The input 'times' cannot be empty")
 	}
 
 	if _, err := strconv.ParseFloat(input, 64); err != nil {
-		errors = append(errors, "The input 'value' must be a float")
+		errors = append(errors, "The input 'times' must be a float")
 	}
 
 	return errors
